@@ -23,14 +23,14 @@ function splitSentence(sentence) {
 //console.log(splitSentence("foquete"))
 
 // Desafio 4
-function concatName() {
-  let sArr = ["Primeiro", "Segundo", "Terceiro", "quarto", "quinto"];
-  let a = sArr.slice(0, 1)
-  let b = sArr.slice(sArr.length - 1)
-  let c = a.concat(b);
-  return c
+function concatName(name) {
+   
+  let a = name.shift();
+  let b = name.pop();
+  let c = a + " " + b;
+  return c;
 }
-console.log(concatName());
+//onsole.log(concatName(["primeiro", "segundo", "terceiro", "quarto"]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
