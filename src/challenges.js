@@ -1,24 +1,26 @@
 // Desafio 1
-function compareTrue(a, b) {  
-  if (a == "true" && b =="true")
-  return true;
-  else{
+function compareTrue(a, b) {
+  if (a === "true" && b === "true")
+    return true;
+  else {
     return false;
   }
-} let compare = compareTrue("true","true")
+} let compare = compareTrue("true", "true")
 console.log(compare)
 
 // Desafio 2
 function calcArea(base, height) {
-  calc = (base * height)/2
+  calc = (base * height) / 2
   return calc;
-} let area = calcArea(10, 50)
-console.log(area) 
+}let area = calcArea(10, 5)
+console.log(area)
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(sentence) {
+  let arr = sentence.split(" ");
+  return arr;
+} arrwords = splitSentence("foguete")
+console.log(arrwords)
 
 // Desafio 4
 function concatName() {
@@ -49,6 +51,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
