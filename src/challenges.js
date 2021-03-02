@@ -5,28 +5,32 @@ function compareTrue(a, b) {
   else {
     return false;
   }
-} console.log(compareTrue("false", "true"))
+}
+console.log(compareTrue("false", "true"))
 
 // Desafio 2
 function calcArea(base, height) {
   calc = (base * height) / 2
   return calc;
-} console.log(calcArea(10, 50))
+}
+console.log(calcArea(10, 50))
 
 // Desafio 3
 function splitSentence(sentence) {
   let arr = sentence.split(" ");
   return arr;
-} console.log(splitSentence("foquete"))
+}
+console.log(splitSentence("foquete"))
 
 // Desafio 4
 function concatName() {
-  let sArr = ["Primeiro", "Segundo", "Terceiro","quarto", "quinto"];
-  let a = sArr.slice(0,1)
-  let b =  sArr.slice(sArr.length - 1)
+  let sArr = ["Primeiro", "Segundo", "Terceiro", "quarto", "quinto"];
+  let a = sArr.slice(0, 1)
+  let b = sArr.slice(sArr.length - 1)
   let c = a.concat(b);
   return c
-  }console.log(concatName())
+}
+console.log(concatName())
 
 // Desafio 5
 function footballPoints() {
