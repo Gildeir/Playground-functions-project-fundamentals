@@ -30,12 +30,16 @@ function concatName() {
   let c = a.concat(b);
   return c
 }
-console.log(concatName())
+console.log(concatName());
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let poitnVit = 3 * wins;
+  let poitnTie = 1 * ties;
+  let result = poitnVit + poitnTie;
+  return result;
 }
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
