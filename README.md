@@ -88,7 +88,7 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 1. Clone o repositório
   * `git clone git@github.com:tryber/sd-010-b-project-playground-functions.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-0x-project-playground-functions`
+    * `cd sd-010-b-project-playground-functions`
 
 2. Instale as dependências e inicialize o projeto
   * Instale as dependências:
