@@ -59,9 +59,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
 
-Este _Pull Request_ deverá conter o arquivo `challenges.js` com suas funções implementadas.
+Este _Pull Request_ deverá conter os arquivos `challenges.js` e `challenges2.js` com suas funções implementadas.
 
-Todas as funções já estão declaradas no arquivo `challenges.js`. Você pode criar outras funções para auxiliarem as já existentes. Contudo **Não altere o nome das funções que já existem**.
+Todas as funções já estão declaradas nos arquivos `challenges.js` e `challenges2.js`. Você pode criar outras funções para auxiliarem as já existentes. Contudo **Não altere o nome das funções que já existem**.
 
 **Os parâmetros das funções já existentes podem e devem ser alterados.**
 
