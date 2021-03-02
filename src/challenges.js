@@ -2,7 +2,7 @@
 function compareTrue(a, b) {
   if (a === true && b === true)
     return true;
-  else {
+  {
     return false;
   }
 }
@@ -30,7 +30,7 @@ function concatName() {
   let c = a.concat(b);
   return c
 }
-//console.log(concatName());
+console.log(concatName());
 
 // Desafio 5
 function footballPoints(wins, ties) {
