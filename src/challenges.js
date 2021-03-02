@@ -5,27 +5,28 @@ function compareTrue(a, b) {
   else {
     return false;
   }
-} let compare = compareTrue("true", "true")
-console.log(compare)
+} console.log(compareTrue("false", "true"))
 
 // Desafio 2
 function calcArea(base, height) {
   calc = (base * height) / 2
   return calc;
-}let area = calcArea(10, 5)
-console.log(area)
+} console.log(calcArea(10, 50))
 
 // Desafio 3
 function splitSentence(sentence) {
   let arr = sentence.split(" ");
   return arr;
-} arrwords = splitSentence("foguete")
-console.log(arrwords)
+} console.log(splitSentence("foquete"))
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
-}
+  let sArr = ["Primeiro", "Segundo", "Terceiro","quarto", "quinto"];
+  let a = sArr.slice(0,1)
+  let b =  sArr.slice(sArr.length - 1)
+  let c = a.concat(b);
+  return c
+  }console.log(concatName())
 
 // Desafio 5
 function footballPoints() {
