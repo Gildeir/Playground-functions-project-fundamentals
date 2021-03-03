@@ -26,10 +26,10 @@ function concatName(arr) {
 
   let a = arr.shift();
   let b = arr.pop();
-  let c = b + " " + a;
+  let c = b + ", " + a;
   return c;
 }
-//console.log(concatName(["primeiro", "segundo", "terceiro"]));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -68,13 +68,25 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
-console.log(catAndMouse(1, 6, 12))
+//console.log(catAndMouse(1, 6, 12))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let newArr = [];
+  for (let index = 0; index < arr.length; index += 1) {
+    if ((arr[index] % 3 == 0) && (arr[index] % 5 == 0)) {
+      newArr.push("fizzBuz")
+    } else if (arr[index] % 5 == 0) {
+      newArr.push("buzz")
+    } else if (arr[index] % 3 == 0) {
+      newArr.push("fizz")
+    } else {
+      newArr.push("bug!")
+    }
+  }
+  return newArr
 }
-
+//console.log(fizzBuzz([9,25]))
 // Desafio 9
 // precisa de global regular expression
 function encode(str) {
