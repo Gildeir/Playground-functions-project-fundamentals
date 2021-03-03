@@ -22,10 +22,10 @@ function splitSentence(sentence) {
 //console.log(splitSentence("foquete"))
 
 // Desafio 4
-function concatName(name) {
+function concatName(arr) {
 
-  let a = name.shift();
-  let b = name.pop();
+  let a = arr.shift();
+  let b = arr.pop();
   let c = a + " " + b;
   return c;
 }
@@ -43,20 +43,32 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arr) {
   let cont = 0;
-    for (let index = 0; index < arr.length; index += 1) {
-      let a = Math.max(...arr)
-      if (a == arr[index]){
-        cont += 1;
-      }
+  for (let index = 0; index < arr.length; index += 1) {
+    let a = Math.max(...arr)
+    if (a == arr[index]) {
+      cont += 1;
     }
-    let result = cont;
-    return result;
-}console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+  }
+  let result = cont;
+  return result;
+}
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 < cat2) {
+    console.log("Cat")
+    return cat1;
+  } else if (cat2 < cat1) {
+    console.log("Cat2")
+    return cat2;
+  } else {
+    console.log("os gatos trombam e o rato foge");
+    return 0;
+  }
+
 }
+console.log(catAndMouse(3, 2, 4))
 
 // Desafio 8
 function fizzBuzz() {
