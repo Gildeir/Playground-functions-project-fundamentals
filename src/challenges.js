@@ -26,10 +26,10 @@ function concatName(arr) {
 
   let a = arr.shift();
   let b = arr.pop();
-  let c = a + " " + b;
+  let c = b + " " + a;
   return c;
 }
-//console.log(concatName(["primeiro", "segundo", "terceiro", "quarto"]));
+//console.log(concatName(["primeiro", "segundo", "terceiro"]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
