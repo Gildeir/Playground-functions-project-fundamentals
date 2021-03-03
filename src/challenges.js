@@ -65,10 +65,10 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanceCat2 < distanceCat1) {
     return "cat2";
   } else {
-    return "Os gatos trombam e o rato foge";
+    return "os gatos trombam e o rato foge";
   }
 }
-//console.log(catAndMouse(1, 6, 12))
+console.log(catAndMouse(1, 6, 12))
 
 // Desafio 8
 function fizzBuzz() {
