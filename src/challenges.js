@@ -56,19 +56,23 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < cat2) {
-    console.log("Cat")
-    return cat1;
-  } else if (cat2 < cat1) {
-    console.log("Cat2")
-    return cat2;
-  } else {
-    console.log("os gatos trombam e o rato foge");
-    return 0;
-  }
+  /*  
+    a = (cat1 - cat2) * -1;
+    b = (cat2 - cat1) *  
+    
+    if (cat1 < cat2) {
+      console.log("Cat")
+      return cat1;
+    } else if (cat2 < cat1) {
+      console.log("Cat2")
+      return cat2;
+    } else {
+      console.log("os gatos trombam e o rato foge");
+      return 0;
+    }*/
 
 }
-console.log(catAndMouse(3, 2, 4))
+//console.log(catAndMouse(3, 2, 4)) 
 
 // Desafio 8
 function fizzBuzz() {
@@ -76,13 +80,24 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// precisa de global regular expression
+function encode(str) {
+  return str.replace(/a/g, "1")
+    .replace(/e/g, "2")
+    .replace(/i/g, "3")
+    .replace(/o/g, "4")
+    .replace(/u/g, "5");
 }
 
-function decode() {
-  // seu código aqui
+function decode(str) {
+  return str.replace(/1/g, "a")
+    .replace(/2/g, "e")
+    .replace(/3/g, "i")
+    .replace(/4/g, "o")
+    .replace(/5/g, "u");
 }
+//console.log(encode("Hi there"))
+//console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
