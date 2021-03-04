@@ -20,12 +20,16 @@ function techList(NomeTech, name) {
   return arrInserted;
 
 }
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+//sconsole.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
-function generatePhoneNumber() {
-
-}
+function generatePhoneNumber(arr) {
+  
+  let str = arr.join('');
+  myPhoneNumber = `(${str.substring(0, 3)}) ${str.substring(3, 6)}-${str.substring(6)}`;
+  
+   return myPhoneNumber
+}//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
 
 // Desafio 12
 function triangleCheck() {
@@ -33,9 +37,26 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(drink) {
+regExp = /\d+/g;
+result = drink.match(regExp)
+let sum = 0;
+let numberOfDrinks = result;
+for (index = 0; index < numberOfDrinks.length; index +=1){
+  
+  sum += parseFloat(numberOfDrinks[index])
+
+  if (sum <= 1){
+
+    return sum + " copo de água"
+  }
+  
+  
+}  return sum + " copos de água";
+  
+} //console.log(hydrate("1 vodkas"))
+
+
 
 module.exports = {
   generatePhoneNumber,
