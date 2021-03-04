@@ -45,16 +45,17 @@ let numberOfDrinks = result;
 for (index = 0; index < numberOfDrinks.length; index +=1){
   
   sum += parseFloat(numberOfDrinks[index])
+  
+  }
 
   if (sum <= 1){
 
     return sum + " copo de água"
-  }
   
   
 }  return sum + " copos de água";
   
-} //console.log(hydrate("1 vodkas"))
+} //console.log(hydrate( "1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 
 
