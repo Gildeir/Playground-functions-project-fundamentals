@@ -9,7 +9,6 @@ function techList(NomeTech, name) {
   if ((sortName.length == 0) || (sortName[0] == '') || (sortName[0] == " ")) {
     return "Vazio!"
   }
-
   for (index = 0; index < sortName.length; index += 1) {
     let objectInserted = {};
     objectInserted["tech"] = sortName[index];
@@ -18,7 +17,6 @@ function techList(NomeTech, name) {
 
   }
   return arrInserted;
-
 }
 //sconsole.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
@@ -45,7 +43,6 @@ function triangleCheck(lineA, lineB, lineC) {
 
 } //console.log(triangleCheck(10, 14, 8))
 
-
 // Desafio 13
 function hydrate(drink) {
   regExp = /\d+/g;
@@ -55,20 +52,14 @@ function hydrate(drink) {
   for (index = 0; index < numberOfDrinks.length; index += 1) {
 
     sum += parseFloat(numberOfDrinks[index])
-
   }
-
   if (sum <= 1) {
 
     return sum + " copo de água"
-
-
   }
   return sum + " copos de água";
 
 } //console.log(hydrate( "1 cachaça, 5 cervejas e 1 copo de vinho"))
-
-
 
 module.exports = {
   generatePhoneNumber,
