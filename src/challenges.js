@@ -1,8 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) return true;
+  if (a === true && b === true) {
+    return true;
+  }
+  return false;
 }
-// console.log(compareTrue(false, true));
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -77,7 +80,8 @@ function fizzBuzz(arr) {
     } else {
       newArr.push('bug!');
     }
-  } return newArr;
+  }
+  return newArr;
 }
 // console.log(fizzBuzz([9, 25, 8]));
 // Desafio 9
