@@ -15,10 +15,8 @@ function techList(NomeTech, name) {
     objectInserted["tech"] = sortName[index];
     objectInserted["name"] = name;
     arrInserted.push(objectInserted);
-
   }
   return arrInserted;
-
 }
 //sconsole.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
@@ -36,13 +34,10 @@ function generatePhoneNumber(arr) {
       if (arr[indexA] == arr[indexB])
         count += 1;
     }
-
     if (count >= 3) {
       return "Array com tamanho incorreto."
     }
-
   }
-
   if (check != 11) {
     return "Array com tamanho incorreto."
   }
@@ -60,7 +55,7 @@ function generatePhoneNumber(arr) {
 
   return myPhoneNumber
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
