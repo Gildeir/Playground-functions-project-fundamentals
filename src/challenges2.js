@@ -35,7 +35,7 @@ function generatePhoneNumber(arr) {
         count += 1;
     }
     if (count >= 3) {
-      return "Array com tamanho incorreto."
+      return "não é possível gerar um número de telefone com esses valores"
     }
   }
   if (check != 11) {
