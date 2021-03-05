@@ -1,5 +1,4 @@
 // Desafio 10
-
 function techList(NomeTech, name) {
   let sortName = NomeTech.sort();
   let arrInserted = [];
@@ -55,7 +54,7 @@ function generatePhoneNumber(arr) {
 
   return mask;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
