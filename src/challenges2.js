@@ -42,7 +42,6 @@ function generatePhoneNumber(arr) {
   arr.forEach((item) => {
     mask = mask.replace('x', item);
   });
-
   return mask;
 }
 
