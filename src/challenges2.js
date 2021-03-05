@@ -8,53 +8,61 @@ function techList(NomeTech, name) {
   }
 
   for (let index = 0; index < sortName.length; index += 1) {
-    let objectInserted;
+    let objectInserted = {};
     objectInserted.tech = sortName[index];
     objectInserted.name = name;
     arrInserted.push(objectInserted);
   }
   return arrInserted;
 }
-// sconsole.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 // Desafio 11
-function generatePhoneNumber(arr) {
-  let check = arr.length;
-  let store = 0;
-  let count = 0;
-  if (check !== 11) return 'Array com tamanho incorreto.';
-  for (let index = 0; index < arr.length; index += 1) {
-    store = arr[index]; if (store < 0 || store > 10) return 'não é possível gerar um número de telefone com esses valores';
+function generatePhoneNumber(phoneNumbers) {
+  let cont = 0;
+  let maskGenerate = '(';
+  if (phoneNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  // arr.sort()
-  for (let indexA = 0; indexA < arr.length; indexA += 1) {
-    for (let indexB = indexA + 1; indexB < arr.length; indexB += 1) {
-      if (arr[indexA] === arr[indexB]) count += 1;
-      console.log(`Contou:${count}`);
+  for (let index = 0; index < phoneNumbers.length; index += 1) {
+    if (index === 2) {
+      maskGenerate += `) ${phoneNumbers[index]}`;
+    } else
+    if (index === 7) {
+      maskGenerate += `-${phoneNumbers[index]}`;
+    } else {
+      maskGenerate += phoneNumbers[index];
     }
-    if (count >= 3) {
+    if (phoneNumbers[index] < 0 || phoneNumbers[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
+    for (let indexB = 0; indexB < phoneNumbers.length; indexB += 1) {
+      if (phoneNumbers[index] === phoneNumbers[indexB]) {
+        cont += 1;
+      }
+    }
+    if (cont > 2) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    cont = 0;
   }
-
-  let mask = '(xx) xxxxx-xxxx';
-
-  arr.forEach((item) => {
-    mask = mask.replace('x', item);
-  });
-  return mask;
+  return maskGenerate;
 }
-
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && lineA > (Math.abs(lineB - lineC))
-    && lineB < (lineA + lineC) && lineB > (Math.abs(lineA - lineC))
-    && lineC < (lineB + lineA) && lineC > (Math.abs(lineA - lineB)));
-  return true;
-} // console.log(triangleCheck(10, 14, 8))
-
+  if (lineA < (lineB + lineC)
+    && lineA > (Math.abs(lineB - lineC))
+    && lineB < (lineA + lineC)
+    && lineB > (Math.abs(lineA - lineC))
+    && lineC < (lineB + lineA)
+    && lineC > (Math.abs(lineA - lineB))) {
+    return true;
+  }
+  return false;
+}
+// console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate(drink) {
   let regExp = /\d+/g;
