@@ -1,35 +1,31 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true)
-    return true; {
-    return false;
-  }
+  if (a === true && b === true) return true;
 }
-//console.log(compareTrue(false, true))
+// console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  calc = (base * height) / 2
+  let calc = (base * height) / 2;
   return calc;
 }
-//console.log(calcArea(10, 50))
+// console.log(calcArea(10, 50))
 
 // Desafio 3
 function splitSentence(sentence) {
-  let arr = sentence.split(" ");
+  let arr = sentence.split(' ');
   return arr;
 }
-//console.log(splitSentence("foquete"))
+// console.log(splitSentence("foquete"))
 
 // Desafio 4
 function concatName(arr) {
-
   let a = arr.shift();
   let b = arr.pop();
-  let c = b + ", " + a;
+  let c = `${b}, ${a}`;
   return c;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -38,74 +34,71 @@ function footballPoints(wins, ties) {
   let result = poitnVit + poitnTie;
   return result;
 }
-//console.log(footballPoints(0, 0));
+// console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(arr) {
   let cont = 0;
   for (let index = 0; index < arr.length; index += 1) {
-    let a = Math.max(...arr)
-    if (a == arr[index]) {
+    let a = Math.max(...arr);
+    if (a === arr[index]) {
       cont += 1;
     }
   }
   let result = cont;
   return result;
 }
-//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let distanceCatA = Math.abs(cat1 - mouse);
+  let distanceCatB = Math.abs(cat2 - mouse);
 
-  distanceCat1 = Math.abs(cat1 - mouse);
-  distanceCat2 = Math.abs(cat2 - mouse);
-
-  if (distanceCat2 > distanceCat1) {
-    return "cat1";
-  } else if (distanceCat2 < distanceCat1) {
-    return "cat2";
-  } else {
-    return "os gatos trombam e o rato foge";
+  if (distanceCatB > distanceCatA) {
+    return 'cat1';
   }
+  if (distanceCatB < distanceCatA) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
-//console.log(catAndMouse(1, 6, 12))
+// console.log(catAndMouse(1, 6, 12))
 
 // Desafio 8
 function fizzBuzz(arr) {
   let newArr = [];
   for (let index = 0; index < arr.length; index += 1) {
-    if ((arr[index] % 3 == 0) && (arr[index] % 5 == 0)) {
-      newArr.push("fizzBuzz")
-    } else if (arr[index] % 5 == 0) {
-      newArr.push("buzz")
-    } else if (arr[index] % 3 == 0) {
-      newArr.push("fizz")
+    if (arr[index] % 3 === 0 && arr[index] % 5 === 0) newArr.push('fizzBuzz');
+    if (arr[index] % 5 === 0) {
+      newArr.push('buzz');
+    } else if (arr[index] % 3 === 0) {
+      newArr.push('fizz');
     } else {
-      newArr.push("bug!")
+      newArr.push('bug!');
     }
-  }
-  return newArr
+  } return newArr;
 }
-//console.log(fizzBuzz([9,25]))
+// console.log(fizzBuzz([9, 25, 8]));
 // Desafio 9
 // precisa de global regular expression
 function encode(str) {
-  return str.replace(/a/g, "1")
-    .replace(/e/g, "2")
-    .replace(/i/g, "3")
-    .replace(/o/g, "4")
-    .replace(/u/g, "5");
+  return str.replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
 }
 
 function decode(str) {
-  return str.replace(/1/g, "a")
-    .replace(/2/g, "e")
-    .replace(/3/g, "i")
-    .replace(/4/g, "o")
-    .replace(/5/g, "u");
+  return str.replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
 }
-//console.log(encode("Hi there"))
-//console.log(decode("h3 th2r2!"))
+// console.log(encode("Hi there"))
+// console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
