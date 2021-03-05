@@ -27,7 +27,7 @@ function generatePhoneNumber(phoneNumbers) {
   for (let index = 0; index < phoneNumbers.length; index += 1) {
     if (index === 2) {
       maskGenerate += `) ${phoneNumbers[index]}`;
-    } else
+    }
     if (index === 7) {
       maskGenerate += `-${phoneNumbers[index]}`;
     } else {
@@ -48,16 +48,16 @@ function generatePhoneNumber(phoneNumbers) {
   }
   return maskGenerate;
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC)
-    && lineA > (Math.abs(lineB - lineC))
-    && lineB < (lineA + lineC)
-    && lineB > (Math.abs(lineA - lineC))
-    && lineC < (lineB + lineA)
-    && lineC > (Math.abs(lineA - lineB))) {
+  && lineA > (Math.abs(lineB - lineC))
+  && lineB < (lineA + lineC)
+  && lineB > (Math.abs(lineA - lineC))
+  && lineC < (lineB + lineA)
+  && lineC > (Math.abs(lineA - lineB))) {
     return true;
   }
   return false;
