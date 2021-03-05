@@ -9,6 +9,7 @@ function techList(NomeTech, name) {
   if ((sortName.length == 0) || (sortName[0] == '') || (sortName[0] == " ")) {
     return "Vazio!"
   }
+
   for (index = 0; index < sortName.length; index += 1) {
     let objectInserted = {};
     objectInserted["tech"] = sortName[index];
@@ -17,17 +18,49 @@ function techList(NomeTech, name) {
 
   }
   return arrInserted;
+
 }
 //sconsole.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber(arr) {
+  let check = arr.length;
+  let store = 0;
+  let count = 0;
 
-  let str = arr.join('');
-  myPhoneNumber = `(${str.substring(0, 3)}) ${str.substring(3, 6)}-${str.substring(6)}`;
+  arr.sort()
+
+for (indexA = 0; indexA < arr.length; indexA += 1){
+    
+    for (indexB = indexA + 1; indexB < arr.length; indexB += 1){
+        if (arr[indexA] == arr[indexB])
+        count += 1;
+    }
+    
+    if (count >= 3) {
+      return "Array com tamanho incorreto."
+    }
+
+  }
+
+  if (check != 11) {
+    return "Array com tamanho incorreto."
+  }
+
+  for (let index = 0; index < arr.length; index += 1) {
+    store = arr[index]
+
+    if ((store < 0) || (store > 10)) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
+
+  let numbers = arr.join('');
+  myPhoneNumber = `(${numbers.substring(0, 2)}) ${numbers.substring(2, 7)}-${numbers.substring(7,12)}`;
 
   return myPhoneNumber
-} //console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -54,7 +87,6 @@ function hydrate(drink) {
     sum += parseFloat(numberOfDrinks[index])
   }
   if (sum <= 1) {
-
     return sum + " copo de água"
   }
   return sum + " copos de água";
