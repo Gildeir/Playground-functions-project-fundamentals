@@ -30,13 +30,13 @@ function generatePhoneNumber(arr) {
 
   arr.sort()
 
-for (indexA = 0; indexA < arr.length; indexA += 1){
-    
-    for (indexB = indexA + 1; indexB < arr.length; indexB += 1){
-        if (arr[indexA] == arr[indexB])
+  for (indexA = 0; indexA < arr.length; indexA += 1) {
+
+    for (indexB = indexA + 1; indexB < arr.length; indexB += 1) {
+      if (arr[indexA] == arr[indexB])
         count += 1;
     }
-    
+
     if (count >= 3) {
       return "Array com tamanho incorreto."
     }
