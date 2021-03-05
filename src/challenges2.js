@@ -25,12 +25,14 @@ function generatePhoneNumber(arr) {
   let check = arr.length;
   let store = 0;
   let count = 0;
+  let arrSort;
 
-  arr.sort()
+  //arr.sort()
 
   for (indexA = 0; indexA < arr.length; indexA += 1) {
-
+    
     for (indexB = indexA + 1; indexB < arr.length; indexB += 1) {
+      
       if (arr[indexA] == arr[indexB])
         count += 1;
     }
@@ -50,12 +52,15 @@ function generatePhoneNumber(arr) {
     }
   }
 
-  let numbers = arr.join('');
-  myPhoneNumber = `(${numbers.substring(0, 2)}) ${numbers.substring(2, 7)}-${numbers.substring(7,12)}`;
+  let mask = '(xx) xxxxx-xxxx';
 
-  return myPhoneNumber
+  arr.forEach(item => {
+      mask = mask.replace('x', item);
+  });
+
+  return mask;
 }
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3 ,4 ,5 ,6 ,7 ,8 ,9 ,0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
